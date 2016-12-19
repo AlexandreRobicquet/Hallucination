@@ -3,6 +3,22 @@
 
 ## Requirements
 
+## 
+
+get the right data
+
+```unix
+mkdir data
+cd data
+```
+
+download
+
+http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-16.mat
+
+
+
+
 ### Cuda
 
 Really important to have well install:
