@@ -20,6 +20,8 @@ http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-19.mat
 
 New dataset coming
 
+Really important to also get cuDNN for Lasagne
+
 
 ### Cuda
 
