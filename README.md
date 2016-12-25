@@ -97,3 +97,16 @@ brew install protobuf boost
 ```
 
 ........ TO FINISH
+
+
+
+# Train
+first create the database
+```unix
+python matn2py.py
+```
+then simply train
+
+```unix
+THEANO_FLAGS=device=gpu python train.py
+```
