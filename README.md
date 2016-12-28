@@ -20,6 +20,8 @@ http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-19.mat
 
 New dataset coming
 
+Really important to also get cuDNN for Lasagne
+
 
 ### Cuda
 
@@ -95,3 +97,19 @@ brew install protobuf boost
 ```
 
 ........ TO FINISH
+
+# Polish the database
+
+Once you've downloaded the vgg-verydeep-16 and 19, you will need to create the normalization batch
+
+# Train
+first create the database
+```unix
+python matn2py.py
+```
+then simply train
+
+```unix
+THEANO_FLAGS=device=gpu python train.py`
+
+```
