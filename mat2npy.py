@@ -13,13 +13,13 @@ for i in idxs:
     W = data['layers'][0][i][0][0][2][0][0]
     W = np.transpose(W, (3,2,0,1))
     b = data['layers'][0][i][0][0][2][0][1]
-    #W = W[:,:,::-1,::-1]
+    W = W[:,:,::-1,::-1]
     print W.shape, b.shape, data['layers'][0][i][0][0][0][0]
     params.extend([W,b])
 
 np.save("data/vgg16.npy",params)
-#np.save("data/mean.npy",data['normalization'][0][0][0])
-np.save("data/classes.npy",data["meta"][0][0].tolist()[1][0])
+np.save("data/mean.npy",data['meta']['normalization'][0][0][0][0])
+np.save("data/classes.npy",data['meta']['classes'][0][0].tolist()[0][0])
 
 
 data = scipy.io.loadmat("data/imagenet-vgg-verydeep-19.mat")
@@ -38,5 +38,5 @@ for i in idxs:
     params.extend([W,b])
 
 np.save("data/vgg19.npy",params)
-#np.save("data/mean-19.npy",data['normalization'][0][0][0])
-np.save("data/classes-19.npy",data["meta"][0][0].tolist()[1][0])
+np.save("data/mean.npy",data['meta']['normalization'][0][0][0][0])
+np.save("data/classes.npy",data['meta']['classes'][0][0].tolist()[0][0])
