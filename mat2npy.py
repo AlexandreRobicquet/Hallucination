@@ -18,7 +18,7 @@ for i in idxs:
     params.extend([W,b])
 
 np.save("data/vgg16.npy",params)
-np.save("data/mean.npy",data['meta']['normalization'][0][0][0][0])
+np.save("data/mean.npy",data['meta']['normalization'][0][0][0][0][2])
 np.save("data/classes.npy",data['meta']['classes'][0][0].tolist()[0][0])
 
 
@@ -38,5 +38,5 @@ for i in idxs:
     params.extend([W,b])
 
 np.save("data/vgg19.npy",params)
-np.save("data/mean.npy",data['meta']['normalization'][0][0][0][0])
+np.save("data/mean.npy",data['meta']['normalization'][0][0][0][0][2])
 np.save("data/classes.npy",data['meta']['classes'][0][0].tolist()[0][0])

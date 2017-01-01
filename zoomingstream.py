@@ -11,7 +11,7 @@ from PIL import Image, ImageFont, ImageDraw
 from collections import deque
 import sys
 
-font = ImageFont.truetype(font="Helvetica.ttf", size=20) #load once
+font = ImageFont.load_default().font# ImageFont.truetype(font="Helvetica.ttf", size=20) #load once
 THE_TEXT_AS_IMAGE = None
 
 
