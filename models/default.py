@@ -60,8 +60,8 @@ mean_img = np.transpose(np.load("data/mean.npy").astype("float32"), axes=(2,0,1)
 image = np.transpose(image, axes=(2,0,1))
 
 conv3 = partial(dnn.Conv2DDNNLayer,
-    strides=(1, 1),
-    border_mode="same", 
+    stride=(1, 1),
+#    border_mode="same", 
     filter_size=(3,3),
     nonlinearity=nn.nonlinearities.rectify)
 
@@ -69,8 +69,8 @@ dense = partial(nn.layers.DenseLayer,
     nonlinearity=nn.nonlinearities.rectify)
 
 max_pool = partial(dnn.MaxPool2DDNNLayer,
-    ds=(2,2), 
-    strides=(2,2))
+    pool_size=(2,2), 
+    stride=(2,2))
 
 
 def build_model(batch_size=batch_size):
@@ -107,19 +107,19 @@ def build_model(batch_size=batch_size):
 
     l = dnn.Conv2DDNNLayer(l,
                 num_filters=4096,
-                strides=(1, 1),
-                border_mode="valid",
+                stride=(1, 1),
+  #              border_mode="valid",
                 filter_size=(7,7))
     l = dnn.Conv2DDNNLayer(l,
                 num_filters=4096,
-                strides=(1, 1),
-                border_mode="same",
+                stride=(1, 1),
+ #               border_mode="same",
                 filter_size=(1,1))
 
     l = dnn.Conv2DDNNLayer(l,
                 num_filters=n_classes,
-                strides=(1,1),
-                border_mode="same",
+                stride=(1,1),
+#                border_mode="same",
                 filter_size=(1,1),
                 nonlinearity=None)
 
