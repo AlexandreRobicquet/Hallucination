@@ -16,6 +16,10 @@ download
 
 http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-16.mat
 
+```unix
+wget http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-16.mat
+```
+
 http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-19.mat
 
 New dataset coming
