@@ -95,7 +95,7 @@ If using Anaconda Python, HDF5 is bundled and the hdf5 formula can be skipped.
 
 ##### Remaining dependencies, with / without Python
 
-```ipython
+```python
 # with Python pycaffe needs dependencies built from source
 brew install --build-from-source --with-python -vd protobuf
 brew install --build-from-source -vd boost boost-python
