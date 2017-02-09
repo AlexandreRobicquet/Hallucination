@@ -1,5 +1,8 @@
 # Hallucination
 
+## First author
+
+(C) 2012- by Adam Tauber, <asciimoo@gmail.com>
 
 ## Requirements
 
